@@ -1,0 +1,12 @@
+{
+  "name": "javascript_orientacao_a_objetos",
+  "version": "1.0.0",
+  "description": "Projeto de landing page feito no curso de 'JavaScript programando a Orientação a Objetos' da Alura.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Otavio Henrique de Lima e Silva",
+  "license": "ISC"
+}
