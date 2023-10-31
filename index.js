@@ -1,32 +1,5 @@
-class Cliente {
-  nome;
-  cpf;
-}
-
-class ContaCorrente {
-  agencia;
-  #saldo = 0;
-
-  saque(saldo) {
-    if (this.#saldo >= saldo) {
-      this.#saldo -= saldo;
-    } else {
-      console.log("Valor invalido");
-    }
-  }
-
-  depositar(saldo) {
-    if (saldo > 0) {
-      this.#saldo += saldo;
-    } else {
-      console.log("Valor invalido");
-    }
-  }
-
-  extrato() {
-    console.log(this.#saldo);
-  }
-}
+import { Cliente } from "./Cliente.js";
+import { ContaCorrente } from "./ContaCorrente.js";
 
 const cliente1 = new Cliente()
 cliente1.nome = "Ricardo";
@@ -36,12 +9,12 @@ console.log(cliente1);
 const cliente1ContaCorrente = new ContaCorrente()
 console.log(cliente1ContaCorrente);
 cliente1ContaCorrente.agencia = 1001;
-cliente1ContaCorrente.depositar(1000);
-cliente1ContaCorrente.extrato();
-cliente1ContaCorrente.saque(100);
-cliente1ContaCorrente.extrato();
-// cliente1ContaCorrente.saque(10000);
-// cliente1ContaCorrente.depositar(-1000);
+console.log(cliente1ContaCorrente.depositar(1000));
+console.log(cliente1ContaCorrente.extrato());
+console.log(cliente1ContaCorrente.saque(100));
+console.log(cliente1ContaCorrente.extrato());
+// console.log(cliente1ContaCorrente.saque(10000));
+// console.log(cliente1ContaCorrente.depositar(-1000));
 
 // const cliente2 = new Cliente()
 // cliente2.nome = "Alice";
