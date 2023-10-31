@@ -26,5 +26,6 @@ const cliente2ContaCorrente = new ContaCorrente()
 cliente2ContaCorrente.setAgencia(1001);
 cliente2ContaCorrente.setCliente(cliente2);
 
-cliente1ContaCorrente.transferir(100, conta);
+cliente1ContaCorrente.transferir(100, cliente2ContaCorrente);
 console.log(cliente1ContaCorrente.extrato());
+console.log(cliente2ContaCorrente.extrato());

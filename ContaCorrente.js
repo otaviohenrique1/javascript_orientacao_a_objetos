@@ -24,7 +24,7 @@ export class ContaCorrente {
       return;
     }
     this.#saldo -= valor;
-    // return valor;
+    return valor;
   }
 
   depositar(valor) {
