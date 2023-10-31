@@ -1,13 +1,30 @@
 export class ContaCorrente {
-  agencia;
+  #agencia;
+  #cliente;
   #saldo = 0;
+
+  setCliente(cliente) {
+    this.#cliente = cliente;
+  }
+
+  getCliente() {
+    return this.#cliente;
+  }
+
+  setAgencia(agencia) {
+    this.#agencia = agencia;
+  }
+
+  getAgencia() {
+    return this.#agencia;
+  }
 
   saque(valor) {
     if (this.#saldo <= valor) {
       return;
     }
     this.#saldo -= valor;
-    return valor;
+    // return valor;
   }
 
   depositar(valor) {
@@ -19,5 +36,10 @@ export class ContaCorrente {
 
   extrato() {
     return this.#saldo;
+  }
+
+  transferir(valor, conta) {
+    const valorSacado = this.saque(valor);
+    conta.depositar(valorSacado);
   }
 }
